@@ -21,7 +21,7 @@ class Wz2008::Import
       Hash[headlines.zip(t)]
     }
     couples.each do |item|
-      Wz2008::Category.find(item[:lfdnr]).update_attributes(description_en: item[:bezeichnung])
+      Wz2008::Category.find(item[:lfdnr]).update_columns(description_en: item[:bezeichnung])
     end
   end
 
